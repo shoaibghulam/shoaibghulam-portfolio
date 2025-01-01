@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Swiper Slider Pagination bullet CSS */
+.swiper .swiper-pagination .swiper-pagination-bullet{
+  background-color: white;
+  } 
+  
+  /* Swiper Slider Pagination bullet Active CSS */
+  .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #e60045;
+  }
+
+
+  .shadow-certificate{
+    box-shadow: 0px 0px 20px -3px rgba(255,252,252,0.75);
+    -webkit-box-shadow: 0px 0px 20px -3px rgba(255,252,252,0.75);
+    -moz-box-shadow: 0px 0px 20px -3px rgba(255,252,252,0.75);
+  }
