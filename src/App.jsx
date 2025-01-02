@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Footer from "./components/Footer"
 
 // import Blog from "./sections/Blog"
@@ -13,13 +13,25 @@ import "aos/dist/aos.css";
 import Certificate from "./sections/Certificate"
 import NavbarMenu from "./components/Navbar"
 import { Element } from "react-scroll"
+import useData from "./hooks/useData"
+import Loader from "./common/Loader"
 function App() {
- 
+  const {loading} = useData();
+  const [TheLoader,setLoader] = useState(false)
   useEffect(() => {
     AOS.init();
     AOS.refresh();
   }, []);
+  useEffect(()=>{
+    if(loading===true){
+    setTimeout(()=>{
+      setLoader(loading)
+    },2000)
+  }
+  },[loading])
+  if(TheLoader){
   return (
+    
    <>
    <NavbarMenu/>
    <Element name="home" className="element">
@@ -42,6 +54,14 @@ function App() {
    <Footer/>
    </>
   )
+}
+else{
+  return(
+    <div className="bg-gray-900 ">
+    <Loader />
+    </div>
+  )
+}
 }
 
 export default App
