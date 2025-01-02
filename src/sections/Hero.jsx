@@ -18,7 +18,7 @@ export default function Hero() {
             src={`${base_url}${about?.image}`}
           />
         </div>
-        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:pt-10 pt-8 items-center text-center">
+        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start pt-12 md:text-left mb-16 md:pt-10  items-center text-center">
           <h1 className="title-font sm:text-5xl leading-6 text-3xl mb-4 font-bold text-white">
             Hi, I'm <span className="text-primary-500">{about?.name}</span>
           </h1>
