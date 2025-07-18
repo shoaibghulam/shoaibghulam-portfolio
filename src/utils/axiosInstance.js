@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance=axios.create({
-    baseURL: 'https://shoaibghulam.pythonanywhere.com'
+    baseURL: '/mock/data.json'
     // baseURL: 'http://127.0.0.1:8000'
     
 })

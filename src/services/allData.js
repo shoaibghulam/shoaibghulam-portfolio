@@ -2,7 +2,7 @@ import { axiosInstance } from "../utils/axiosInstance"
 
 
 export const allData =async ()=>{
-    return await axiosInstance.get('/api')
+    return await axiosInstance.get('')
     .then((res)=>{
      return res.data
     })
