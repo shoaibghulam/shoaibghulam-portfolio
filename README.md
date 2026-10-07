@@ -2,7 +2,7 @@
 
 Source code for my personal portfolio site, live at **[shoaibghulam.vercel.app](https://shoaibghulam.vercel.app)**.
 
-A single-page React site with hero, what-I-do, skills, portfolio, certificates, testimonials, blog and contact sections. Content is loaded from a backend API through a small data hook, so projects and testimonials can be updated without touching the front end.
+A single-page React site with hero, what-I-do, skills, portfolio, certificates, testimonials, blog and contact sections. Section content (projects, skills, certificates, testimonials) is loaded from a JSON data file through a small `useData` hook and a shared Axios client, so it can be pointed at a real backend by changing one base URL.
 
 ## Stack
 
@@ -10,7 +10,7 @@ A single-page React site with hero, what-I-do, skills, portfolio, certificates, 
 |---|---|
 | UI | React 18 · Vite · Tailwind CSS · Flowbite React |
 | Motion | AOS (animate on scroll) · Swiper · react-scroll |
-| Data | Axios instance + `useData` hook against a REST backend |
+| Data | Axios instance + `useData` hook over a JSON data file (backend-ready) |
 | Tooling | ESLint (react, react-hooks, react-refresh) · PostCSS · Autoprefixer |
 | Deploy | Vercel |
 
